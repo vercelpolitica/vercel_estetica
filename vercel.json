@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node"
-    }
-  ],
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist",
   "routes": [
     {
-      "src": "/[^.]+",
+      "src": "/[^.]+$",
       "dest": "/index.html"
     }
   ]
