@@ -2,16 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Download, MessageCircle, Sparkles, Zap, Shield, Clock } from "lucide-react";
 
-/**
- * Design Philosophy: Luxo Moderno com Gradientes Sutis
- * - Art Deco contemporâneo com glassmorphism
- * - Paleta: Ouro, prata, preto profundo, blush pink
- * - Tipografia: Bodoni Moda (títulos) + Raleway (corpo)
- * - Animações: Transições suaves, hover elegante, scroll parallax
- */
-
 export default function Home() {
-  const whatsappLink = "https://wa.me/5511999999999?text=Olá%20Vercel%20Clínica%20de%20Estética%21%20Gostaria%20de%20mais%20informações%20sobre%20Monjaro%20e%20Ozempic.";
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=5513955469161&text=Olá%20Vercel%20Clínica%20de%20Estética%21%20Gostaria%20de%20mais%20informações%20sobre%20Monjaro%20e%20Ozempic.&type=phone_number&app_absent=0";
   const appDownloadLink = "#download-app";
 
   return (
@@ -61,13 +53,13 @@ export default function Home() {
               <span className="text-black">Sua Beleza,</span> <span className="text-black">Transformada</span>
             </h1>
 
-            <p className="text-xs sm:text-xs md:text-sm lg:text-base max-w-lg mx-auto leading-tight">
+            <p className="text-xs sm:text-xs md:text-sm lg:text-base max-w-lg mx-auto leading-tight text-white !text-white">
               Tratamentos faciais e corporais de luxo com tecnologia avançada. Descubra a clínica de estética que redefine a excelência.
             </p>
             <div className="flex flex-col sm:flex-row gap-1 md:gap-3 pt-0.5 md:pt-2 justify-center">
               <Button 
                 size="sm"
-                className="bg-gradient-gold text-foreground hover:shadow-lg transition-all text-sm md:text-base"
+                className="bg-[#25D366] text-white hover:bg-[#20BA5A] transition-all text-sm md:text-base"
                 onClick={() => window.location.href = whatsappLink}
               >
                 <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
@@ -376,7 +368,7 @@ export default function Home() {
           </div>
           <Button 
             size="sm"
-            className="bg-background text-foreground hover:bg-background/90 text-sm md:text-base"
+            className="bg-[#25D366] text-white hover:bg-[#20BA5A] text-sm md:text-base"
             onClick={() => window.location.href = whatsappLink}
           >
             <MessageCircle className="w-4 md:w-5 h-4 md:h-5 mr-2" />
