@@ -23,11 +23,12 @@ export default function Home() {
           </div>
           <Button 
             size="sm"
-            className="bg-gradient-gold text-foreground hover:shadow-lg transition-all text-xs md:text-sm"
-            onClick={() => window.location.href = whatsappLink}
+            className="bg-gradient-gold text-foreground hover:shadow-lg transition-all text-xs md:text-sm relative overflow-hidden group"
+            onClick={() => window.location.href = appDownloadLink}
           >
-            <MessageCircle className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-            <span className="hidden sm:inline">WhatsApp</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 group-hover:animate-shimmer" />
+            <Download className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2 relative z-10" />
+            <span className="hidden sm:inline relative z-10">Download Android</span>
           </Button>
         </div>
       </nav>
@@ -57,13 +58,13 @@ export default function Home() {
               Tratamentos faciais e corporais de luxo com tecnologia avançada. Descubra a clínica de estética que redefine a excelência.
             </p>
             <div className="flex flex-col sm:flex-row gap-1 md:gap-3 pt-0.5 md:pt-2 justify-center">
-              <Button 
+               <Button 
                 size="sm"
                 className="bg-[#25D366] text-white hover:bg-[#20BA5A] transition-all text-sm md:text-base"
-                onClick={() => window.location.href = whatsappLink}
+                onClick={() => window.location.href = appDownloadLink}
               >
-                <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-                Agende Agora
+                <Download className="w-4 md:w-5 h-4 md:h-5 mr-2" />
+                Download Android
               </Button>
               <Button 
                 size="sm"
@@ -399,8 +400,8 @@ export default function Home() {
             <div className="space-y-3 md:space-y-4">
               <h4 className="font-semibold text-sm md:text-base">Contato</h4>
               <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-muted-foreground">
-                <li><a href={whatsappLink} className="hover:text-primary transition-colors">WhatsApp -endereço pelo direct</a></li>
-                <li><a href="tel:+5511999999999" className="hover:text-primary transition-colors"></a></li>
+                <li><a href={whatsappLink} className="hover:text-primary transition-colors">WhatsApp</a></li>
+                <li><a href="tel:+5513955469161" className="hover:text-primary transition-colors"></a></li>
               </ul>
             </div>
           </div>
